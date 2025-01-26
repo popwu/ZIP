@@ -22,6 +22,7 @@ export async function readZipFile(file: File): Promise<ZipContent> {
         // 为图片创建 URL
         const url = URL.createObjectURL(blob);
         images.push({
+          id: crypto.randomUUID(),
           name: fileName,
           url,
           file: new File([blob], fileName, { type: blob.type }),

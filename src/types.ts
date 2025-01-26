@@ -1,4 +1,5 @@
 export interface ImageFile {
+  id: string;
   name: string;
   url: string;
   file: File;
