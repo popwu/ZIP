@@ -7,6 +7,7 @@ export interface ImageFile {
 }
 
 export interface Attachment {
+  id: string;
   name: string;
   file: File;
   size: number;

@@ -31,6 +31,7 @@ export async function readZipFile(file: File): Promise<ZipContent> {
       } else if (path !== 'README.md') {
         // 为附件创建 File 对象
         attachments.push({
+          id: crypto.randomUUID(),
           name: fileName,
           file: new File([blob], fileName, { type: blob.type }),
           size: blob.size

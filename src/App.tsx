@@ -3,7 +3,6 @@ import Editor from '@monaco-editor/react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { ImageEditor } from './components/ImageEditor';
-import { AttachmentList } from './components/AttachmentList';
 import { readZipFile, createZipFile } from './utils/zip';
 import { ImageFile, Attachment } from './types';
 
@@ -94,6 +93,7 @@ function App() {
     const files = event.target.files;
     if (files) {
       const newAttachments = Array.from(files).map((file) => ({
+        id: crypto.randomUUID(),
         name: file.name,
         file,
         size: file.size

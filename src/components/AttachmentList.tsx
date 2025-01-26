@@ -1,4 +1,3 @@
-import React from 'react';
 import { Attachment } from '../types';
 
 interface AttachmentListProps {
